@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CityController;
+use App\Http\Controllers\VillageController;
+use App\Http\Controllers\IndexController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +21,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/add_city',[CityController::class,'add_city'])->name('add_city');
+Route::get('/show/{id}',[CityController::class,'show'])->name('show');
+Route::get('/showvillage/{id}',[VillageController::class,'showvillage'])->name('showvillage');
+
+Route::get('/index/{id}',[IndexController::class,'index'])->name('index');

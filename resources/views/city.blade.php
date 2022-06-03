@@ -1,0 +1,2 @@
+{{$data->village_name}}
+

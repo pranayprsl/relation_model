@@ -1,0 +1,1 @@
+{{$village->city_name}}
