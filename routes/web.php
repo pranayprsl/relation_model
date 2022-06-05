@@ -11,9 +11,7 @@ use App\Http\Controllers\SingerController;
 use App\Http\Controllers\SongController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\CustomerController;
-
-
-
+use App\Http\Controllers\SessionController;
 
 
 Route::get('/', function () {
@@ -47,3 +45,7 @@ Route::get('/show_singer/{id}',[SingerController::class,'show_singer'])->name('s
 
 Route::get('/show_cars/{id}',[CustomerController::class,'show_cars'])->name('show_cars');
 Route::get('/show_customer/{id}',[CarController::class,'show_customer'])->name('show_customer');
+
+Route::get('/welcome',[SessionController::class,'welcome'])->name('welcome');
+Route::get('/logindata',[SessionController::class,'login'])->name('login');
+Route::View('login','login');
